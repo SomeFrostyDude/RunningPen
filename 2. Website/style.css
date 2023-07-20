@@ -1,0 +1,81 @@
+body {background-color: aquamarine;}
+
+
+.titleDiv {
+    width: 80%;
+    height:50px;
+    margin-left:5%;
+    text-align:center;
+    background-color: white;
+    padding-left:10px;
+    padding-top:10px;
+    border-style:solid;
+    border-bottom:0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px;
+}
+
+.inputDiv {
+    width:80%;
+    height:100%;
+    margin-left: 5%;
+    background-color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style:solid;
+    border-top:0px;
+    border-bottom:0px;
+}
+
+.submitDiv {
+    width:80%;
+    height:100%;
+    margin-left: 5%;
+    background-color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom:10px;
+    border-style:solid;
+    border-top:0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius:20px;
+}
+
+.artParallax1 {
+    background-image:url(https://render.fineartamerica.com/images/rendered/default/flat/puzzle/images/artworkimages/medium/3/4-bold-and-brash-squidward-transparent.png?&targetx=-19&targety=0&imagewidth=789&imageheight=1000&modelwidth=750&modelheight=1000&backgroundcolor=f7d15e&orientation=1&producttype=puzzle-18-24&brightness=550&v=6);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 600px;
+    
+    width:80%;
+    height:100%;
+    margin-left: 5%;
+    background-color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style:solid;
+
+}
+
+.artParallax2 {
+    background-image:url(https://storage.modworkshop.net/mods/images/131533_1668539442_fcceb8cb259752c447c89cb68bbf486b.gif);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 600px;
+    
+    width:80%;
+    height:100%;
+    margin-left: 5%;
+    background-color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style:solid;
+
+}

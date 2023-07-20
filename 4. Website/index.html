@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running pen</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+
+    <canvas id="testcanvas" width="600" height="600" style="background-color:black;border-style:solid;border-width:3px;margin-top:3%;margin-left:30%"></canvas><br>
+
+
+    <script>
+        var canvas = document.getElementById("testcanvas");
+        var context = canvas.getContext("2d");
+
+
+        canvas.fillStyle = "rgba(0,0,0,255)";
+
+
+        var x = canvas.width / 2;
+        var y = canvas.height / 2;
+
+        var x_vel = 6;
+        var y_vel = 8;
+
+        var grav = 0;
+
+        var rectangle_size = 10;
+
+        var red = 0;
+
+        function clear_canvas() {
+            context.clearRect(0,0,canvas.width,canvas.height)
+        }
+
+
+
+        function move() {
+
+            y_vel = y_vel + grav;
+
+            x = x + x_vel;
+            y = y + y_vel;
+
+            context.lineTo(x,y);
+
+            if (x + rectangle_size > canvas.width || x < 0) {
+                x_vel = x_vel * (-1);
+
+                if (x + rectangle_size > canvas.width) {
+                    x = canvas.width - rectangle_size;
+                }
+
+                if (x < 0) {
+                    x = 0;
+                }
+
+
+            }
+
+            if (y + rectangle_size > canvas.height || y < 0) {
+                y_vel = y_vel * (-1);
+
+                if (y + rectangle_size > canvas.height) {
+                    y = canvas.height - rectangle_size;
+                }
+
+                if (y < 0) {
+                    y = 0;
+                }
+            }
+
+            k = Math.floor(-255/canvas.height)
+            red = k * y + canvas.height;
+
+            context.fillStyle = `rgba(${red},0,255,255)`;
+
+
+            <!--context.clearRect(0,0,canvas.width,canvas.height)-->
+            context.fillRect(x, y, rectangle_size, rectangle_size);
+            requestAnimationFrame(move);
+        }
+
+            move();
+
+
+    </script>
+
+    <button id="cavas_clearer" type="reset" onclick="clear_canvas()" style="width:120px;height:50px;margin-left:47%">clear</button>
+
+</body>
+</html>
